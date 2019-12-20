@@ -45,7 +45,6 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
 A extensão do protocolo HTTP incluindo o GPOS irá permitir novos rescursos de funcionalidade o que permitirá aumentar a segurança na internet. Esse protoclo é útil no campo de perseguição a sites com conteúdo criminosos. Esse protocolo é baseado no HTTP(RFC 2616) e GPOS(1712)
 
 ## 2. Conventions used in this document
@@ -57,8 +56,7 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
- 
+>
  GET / HTTP/1.1
  Host: developer.mozilla.org
  Accept-Language: fr
