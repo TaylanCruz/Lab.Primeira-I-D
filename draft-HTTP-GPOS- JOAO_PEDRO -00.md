@@ -1,4 +1,4 @@
-**Working Group Name**  **Initial. Lastname**
+**HTTP-GPOS**  **Joao Rolemberg**
   
 Internet Draft         DComp/UFS
 
@@ -8,7 +8,7 @@ Expires: Fail 0000
 
 
 
-# Title draft-GRUPO-DE-TRABALHO-NOME-ALUNO-00.txt
+# Draft HTTP GPOS Joao Pedro 
 
 
 ## Status of this Memo
@@ -44,8 +44,13 @@ review these documents carefully, as they describe your rights and restrictions 
 > Type your abstract here. Typically 5-10 lines, never less than 3 lines nor more than 20 lines 
 
 
-## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+## 1. Introdução
+>Ter a informação de GPOS juntamente com as mensagens de HTTP é importante pois o servidor pode ter acesso a localização do usuário 
+para assim poder oferecer propagandas direcionadas por região ou até por questões de segurança caso haja algum ataque o servidor 
+saberia a localização exata de quem enviou os pacotes.E como essas mensagens estão ligadas ao HTTP, todas as pessoas que estão
+navegando na  internet informariam sua posição e isso pode gerar uma falha de segurança pois caso haja alguém monitorando as 
+mensagens ela pode ter acesso a informações de posição de pessoas importantes e pode usar isso para prejudicar alguém ou
+até cometer crimes.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -55,13 +60,27 @@ In this document, these words will appear with that interpretation   only when i
 
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
-## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+## 3. Descrição da mensagens
+
+A mensagem de GET do protocolo HTTP teria um campo a mais que seria denominado: GPOS que seria preenchido 
+com o nome do dispositivo que está fazendo a requisição. A mensagem seria da forma abaixo:
+
+GET /GPOS_SERVER HTTP/1.1
+Host: 
+GPOS: LAT=LONG=ALT
+
+E caso o cliente queira enviar uma mensagem para o servidor utilizaria a mesma mensagem com o método diferente:
+
+POST /GPOS_CLIENT HTTP/1.1
+Host: 
+GPOS: LAT=LONG=ALT
+
+Caso o cliente não queira requisitar ou enviar sua localização os campos LAT,LONG e ALT são preenchidos com X.
 
 
 ## 4. Security Considerations
 
->Add any security considerations
+
 
 ## 5. IANA Considerations
 
@@ -92,4 +111,6 @@ pp. 1573-1583.
 
 ## 8. Acknowledgments
 >Add any acknowledgements
+
+https://github.com/DCOMP-UFS/Lab.Primeira-I-D.git
 
