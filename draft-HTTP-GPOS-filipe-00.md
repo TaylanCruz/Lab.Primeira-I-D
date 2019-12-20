@@ -45,7 +45,7 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-A extensão do protocolo HTTP incluindo o GPOS irá permitir novos rescursos de funcionalidade o que permitirá aumentar a segurança na internet. Esse protoclo é útil no campo de perseguição a sites com conteúdo criminosos. Esse protocolo é baseado no HTTP(RFC 2616) e GPOS(1712)
+A extensão do protocolo HTTP incluindo o GPOS irá permitir novos rescursos de funcionalidade o que permitirá aumentar a segurança na internet. Esse protoclo é útil no campo de perseguição a sites com conteúdo criminosos. Esse protocolo é baseado no HTTP(RFC 2616) e GPOS(1712).
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,36 +56,35 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->
- GET / HTTP/1.1
- Host: developer.mozilla.org
- Accept-Language: fr
- GPOS: ip_servidor_web
+> GET / HTTP/1.1
+> Host: developer.mozilla.org
+> Accept-Language: fr
+> GPOS: ip_servidor_web
 
- HTTP/1.1 200 OK
- GPOS: ip_servidor_web nome_site_html ip_dns_server
- Date: Sat, 09 Oct 2010 14:28:02 GMT
- Server: Apache
- Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
- ETag: "51142bc1-7449-479b075b2891b"
- Accept-Ranges: bytes
- Content-Length: 29769
- Content-Type: text/html 
+> HTTP/1.1 200 OK
+> GPOS: ip_servidor_web nome_site_html ip_dns_server
+> Date: Sat, 09 Oct 2010 14:28:02 GMT
+> Server: Apache
+> Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+> ETag: "51142bc1-7449-479b075b2891b"
+> Accept-Ranges: bytes
+> Content-Length: 29769
+> Content-Type: text/html 
 
- POST / HTTP/1.1
- Host: developer.mozilla.org
- Accept-Language: fr
- GPOS: ip_servidor_web nome_site_html ip_dns_server
+> POST / HTTP/1.1
+> Host: developer.mozilla.org
+> Accept-Language: fr
+> GPOS: ip_servidor_web nome_site_html ip_dns_server
 
- HTTP/1.1 200 OK
- GPOS:ip_servidor_web nome_site_html ip_dns_server
- Date: Sat, 09 Oct 2010 14:28:02 GMT
- Server: Apache
- Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
- ETag: "51142bc1-7449-479b075b2891b"
- Accept-Ranges: bytes
- Content-Length: 29769
- Content-Type: text/html 
+> HTTP/1.1 200 OK
+> GPOS:ip_servidor_web nome_site_html ip_dns_server
+> Date: Sat, 09 Oct 2010 14:28:02 GMT
+> Server: Apache
+> Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+> ETag: "51142bc1-7449-479b075b2891b"
+> Accept-Ranges: bytes
+> Content-Length: 29769
+> Content-Type: text/html 
 ## 4. Security Considerations
 
 >Add any security considerations
