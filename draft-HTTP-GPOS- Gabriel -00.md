@@ -45,7 +45,8 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+ Tendo em vista a necessídade de melhor precisão na hora da localização de usuários e definição de rotas desejadas por aplicativos como o google maps, faz-se necessário um protocolo HHTP que dispinibilize a localização e transferencia de informações baseadas em geolocalização.
+ O GPOS é um Protocolo que possibilita a geolocalização.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -55,8 +56,33 @@ In this document, these words will appear with that interpretation   only when i
 
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
-## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+## 3. Descrição do Protocolo
+Uma mensagem HTTP com um camo GPOS que ao ser enviada pelo cliente teremos O nome do dispositivo que está enviando a mensagem e o destino.
+
+MKensagem Cliente:
+GET / HTTP/1.1
+Host: developer.mozilla.org
+GPOS: nome_dispositivo, Destino
+
+Quando respondida pelo servidor o campo GPOS envia informações meridionais e uma rota considerando as informações meriodionais.
+
+Mensagem Servidor:
+ HTTP/1.1 200 OK
+ Date: Sat, 09 Oct 2010 14:28:02 GMT
+ Server: Apache
+ Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ ETag: "51142bc1-7449-479b075b2891b"
+ Accept-Ranges: bytes
+ Content-Length: 29769
+ Content-Type: text/html 
+ GPOS: Longitude, Latitude, Graus, Rotas
+ 
+ 
+SENDO:
+  LONGITUDE:Descrição da localização de um lugar na Terra medido em graus, de zero a 180 para leste ou para oeste, a partir do                              Meridiano de Greenwich.
+  Latitude:È a coordenada geográfica ou geodésica definida na esfera, no elipsoide de referência ou na superfície terrestre, que   é o ângulo entre o plano do equador e a normal à superfície de referência.
+  Graus: angulação geral da rota do dispisitivo
+  Rotas: a rota mais apropriada gerada pela aplicação considerando aspectos importantes como locais perigosos.
 
 
 ## 4. Security Considerations
@@ -92,4 +118,3 @@ pp. 1573-1583.
 
 ## 8. Acknowledgments
 >Add any acknowledgements
-
