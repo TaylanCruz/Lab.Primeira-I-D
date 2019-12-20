@@ -62,7 +62,7 @@ In this document, the characters ">>" preceding an indented line(s)   indicates 
 
 Uma requisação GET HTTP-GPOS feita pelo cliente deve incluir os campos:
 
-GET <objeto> <versão_HTTP>
+GET <objeto.extensão> <versão_HTTP>
 
 HOST:
 
@@ -78,7 +78,7 @@ GPOS: dispositivo
 
 Uma requisação POST HTTP-GPOS feita pelo cliente deve incluir os campos:
 
-POST <objeto> <versão_HTTP>
+POST <objeto.extensão> <versão_HTTP>
 
 HOST:
 
