@@ -35,7 +35,7 @@ This Internet-Draft will expire on Fail 19, 0000.
 
 ## Copyright Notice
 Copyright (c) 0000 IETF Trust and the persons identified as the document authors. All rights reserved.
-
+ 
 This document is subject to BCP 78 and the IETF Trust’s Legal Provisions Relating to IETF Documents 
 (http://trustee.ietf.org/license-info) in effect on the date of publication of this document. Please
 review these documents carefully, as they describe your rights and restrictions with respect to this document. 	
