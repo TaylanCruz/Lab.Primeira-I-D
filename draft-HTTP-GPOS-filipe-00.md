@@ -57,9 +57,9 @@ In this document, the characters ">>" preceding an indented line(s)   indicates 
 
 ## 3. Section 2 heading as appropriate
 > GET / HTTP/1.1
-> Host: developer.mozilla.org
-> Accept-Language: fr
-> GPOS: ip_servidor_web
+  Host: developer.mozilla.org
+  Accept-Language: fr
+  GPOS: ip_servidor_web
 
 > HTTP/1.1 200 OK
 > GPOS: ip_servidor_web nome_site_html ip_dns_server
