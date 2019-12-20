@@ -15,12 +15,12 @@ Na seção3, descreva as mensagens do cliente e do servidor:
 
 nome_dispositivo ttl class **GPOS**  longitude latitude altitude
 
-Defina como fazer a extensão para o **POST**
+Defina como fazer a extensão para o **PUT**
              
 Observações: 
 
 * Os campos  nome_dispositivo, ttl e classe são opcionais na RFC 1712. 
            
-* Sua I-D deve ser renomeada de forma que o arquivo inclua seu próprio nome:  draft-HTTP-GPOS- **SEU_NOME** -00.txt
+* Sua I-D deve ser renomeada de forma que o arquivo inclua seu próprio nome:  draft-HTTP-GPOS-SEU_NOME-00.txt
 
 * Para formatar texto no formato MarkDown verifique o [link](https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md)
