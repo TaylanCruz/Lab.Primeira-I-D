@@ -1,4 +1,4 @@
-**Working Group Name**  **Initial. Lastname**
+**Network Working Group**  **Reinaldo. Lima**
   
 Internet Draft         DComp/UFS
 
@@ -8,7 +8,7 @@ Expires: Fail 0000
 
 
 
-# Title draft-GRUPO-DE-TRABALHO-NOME-ALUNO-00.txt
+# GPOS-Network Working Group-Reinaldo-Lima-00.txt
 
 
 ## Status of this Memo
@@ -45,7 +45,7 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+Tendo em vista o uso crescente de tecnologias que utilizam a localização do usuário, como o Uber e o 99 se faz cada vez mais necessário a implementação de uma requisição de coordenadas GPS dentro da própria requisição HTTP.Esse protocolo visa tal implementação de modo que seja possível através de uma requisição HTTP conseguir dados de geolocalização do site.  
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -55,8 +55,45 @@ In this document, these words will appear with that interpretation   only when i
 
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
-## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+## 3. Estrutura do Protocolo
+
+O Cliente (C) deve enviar uma requisição HTTP com um campo GPOS contendo o nome do dispositivo, ao qual será respondido pelo servidor (S) com uma resposta contendo um campo GPOS com o nome do dispositivo, o time-to-live, a classe, o GPOS, a longitude, a latitude e a altitude do dispositivo.
+
+C: 
+GET / HTTP/1.1
+Host: developer.mozilla.org
+GPOS: nome_dispositivo
+
+S:
+HTTP/1.1 200 OK
+Date: Sat, 09 Oct 2010 14:28:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ETag: "51142bc1-7449-479b075b2891b"
+Accept-Ranges: bytes
+Content-Length: 29769
+Content-Type: text/html 
+GPOS: nome_dispositivo ttl class GPOS longitude latitude altitude
+
+onde:
+   NOME_DISPOSITIVO  O nome do dispositivo cuja localização deseja ser obtida,
+                     é codificado como uma string.
+
+   LONGITUDE O número real descrevendo a longitude codificado como uma
+             string. A precisão é limitada a 256 caracteres dentro da
+             faixa -90..90 graus. Números positivos indicam locais ao
+             norte do Equador.
+
+   LATITUDE O número real descrevendo a longitude codificado como uma
+             string. A precisão é limitada a 256 caracteres dentro da
+             faixa -180..180 graus. Números positivos indicam locais ao
+             leste do meridiano de Greenwich.
+
+   ALTITUDE O número real descrevendo a altitude (em metros) a partir do
+            nível do mar codificado como uma string. A precisão é limitada
+            a 256 caracteres. Números positivos indicam locais acima do
+            nível do mar.
+
 
 
 ## 4. Security Considerations
