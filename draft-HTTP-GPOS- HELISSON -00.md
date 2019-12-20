@@ -1,4 +1,5 @@
-**Working Group Name**  **Initial. Lastname**
+
+**http gpos**  **helisson. oliveira**
   
 Internet Draft         DComp/UFS
 
@@ -8,7 +9,7 @@ Expires: Fail 0000
 
 
 
-# Title draft-GRUPO-DE-TRABALHO-NOME-ALUNO-00.txt
+# Title draft-HTPP-GPOs-Helisson-00.txt
 
 
 ## Status of this Memo
@@ -45,7 +46,11 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+> O GPOs que é um protocolo que tras a geolocalização de algo, os servidores hoje utilizam IPs para seu endereçamento, assim sabendo para
+onde quem requisitou algum informação e quem é que fornece essa informação. Em vez de utilizar IPs como endereçamento, iremos usar a geolocalização de um servidor
+apartir de um requisição feita por um usuario a um site, utilizaremos o GPO para sabemos qual o servidor mais proximo, por exemplo: se estou na localização -30.15000 na latitude, 
+-11.250 na longitute, se o servidor que eu estou requisitando dados ta na localização -30.160 na latitude e -11300 na longitude, com essas informções saberemos exatamente o caminho.
+
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,7 +61,8 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
+>Em um post, teremos a geolocalização do emissor, a geolocalização do recepitor, junto com os dados que o emissor esta passando teremos no inicio a geolocalização do emissor, 3 #s irá simbolizar que o 
+a geolocalização do emissor acabou, os dados estaram no meio e no fim mais 3 #s irá simbolizar que os dados acabou e apartir dai o valor que aparecer é o valor da geolocalização do receptor.
 
 
 ## 4. Security Considerations
