@@ -1,4 +1,4 @@
-**Working Group Name**  **Initial. Lastname**
+**HTTP-GPOS**  **José Vitor Santos Silva**
   
 Internet Draft         DComp/UFS
 
@@ -8,7 +8,7 @@ Expires: Fail 0000
 
 
 
-# Title draft-GRUPO-DE-TRABALHO-NOME-ALUNO-00.txt
+# draft-HTTP-GPOS-JOSE_VITOR_SANTOS_SILVA.txt
 
 
 ## Status of this Memo
@@ -32,6 +32,7 @@ them other than as "work in progress."
 The list of current Internet-Drafts can be accessed at http://www.ietf.org/ietf/1id-abstracts.txt
 The list of Internet-Draft Shadow Directories can be accessed at http://www.ietf.org/shadow.html
 This Internet-Draft will expire on Fail 19, 0000.
+ 
 
 ## Copyright Notice
 Copyright (c) 0000 IETF Trust and the persons identified as the document authors. All rights reserved.
@@ -45,7 +46,8 @@ review these documents carefully, as they describe your rights and restrictions 
 
 
 ## 1. Introduction
-> Faça a descrição de seu serviço e justifique para que o GPOS é útil.
+O protocolo proposto serve para encontrar a geolocalização de um site.
+Essa informação pode ser útil para que sejam feitas propagandas direcionadas, medidas de segurança (o host poderia optar por criptografar ou não as informações dependendo de onde o servidor está), entre outras aplicações.
 
 ## 2. Conventions used in this document
 In examples, "C:" and "S:" indicate lines sent by the client and server respectively.
@@ -56,8 +58,17 @@ In this document, these words will appear with that interpretation   only when i
 In this document, the characters ">>" preceding an indented line(s)   indicates a statement using the key words listed above. This convention aids reviewers in quickly identifying or finding the portions of this RFC covered by these keywords.
 
 ## 3. Section 2 heading as appropriate
->Faça a descrição do seu protocolo aqui
 
+A mensagem GET teria um campo a mais indicando que o host quer saber a localização do servidor, este campo seria opcional. 
+GET posicao HTTP/1.1
+Host:
+GPOS: long/lat/alt
+Cada servidor teria a informação de sua geolocalização e ela seria enviada para o requisitante no campo adicionado na resposta da requisição GET.
+Na mensagem POST poderia ser feito algo semelhante:
+POST posicao HTTP/1.1
+Host:
+GPOS: long/lat/alt
+No campo de dados o host poderia enviar sua localização. 
 
 ## 4. Security Considerations
 
