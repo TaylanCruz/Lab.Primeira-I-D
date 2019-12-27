@@ -1,4 +1,4 @@
-**Working Group Name**  **Initial. Lastname**
+**Working Group Name**  **Taylan. Cruz**
   
 Internet Draft         DComp/UFS
 
@@ -8,7 +8,7 @@ Expires: Fail 0000
 
 
 
-# Title draft-GRUPO-DE-TRABALHO-NOME-ALUNO-00.txt
+# Title draft-GRUPO-DE-TRABALHO-TAYLAN-CRUZ-00.txt
 
 
 ## Status of this Memo
